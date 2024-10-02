@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle, rgba(232,87,150,1) 0%, rgba(62,56,244,1) 100%);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    color: #fff;
+    text-align: left;
+    font-family: "Anton SC", sans-serif;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    line-height: 1.2;
+    display: flex; /* Usar flexbox para alinear elementos */
+    justify-content: space-between; /* Espacio entre el título y la navegación */
+    align-items: center; /* Centrar verticalmente */
+    padding: 1.5rem; /* Espaciado interno */
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 0; /* Elimina márgenes para mejor alineación */
+    font-size: 2rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 2rem;
+    flex-grow: 1;
+    justify-items: center; /* Centra horizontalmente las tarjetas */
+    align-items: center; /* Centra verticalmente las tarjetas */
+    margin-top: 6rem; /* Ajusta este valor a la altura deseada por encima del header */
+    
+}
+
+.grid-container a {
+    text-decoration: none;
+    color: inherit; 
+}
+
+.grid-container a:hover {
+    color: inherit; 
+}
+
+
+.card {
+    padding: 2rem;
+    height: 20rem;
+    width: 20rem;
+    transition: transform 0.3s ease;
+    margin-bottom: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    background-color: #050a3094;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 280px;
+    text-align: center; /* Alinea todo el contenido al centro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.size-select {
+    padding: 2px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    cursor: pointer;
+    margin-top: -22px;
+    margin-left: 9rem;
+    display: block;
+    width: 80px;
+}
+
+.size-select:hover {
+    border-color: #888;
+}
+
+.size-select:focus {
+    border-color: #555;
+    outline: none;
+}
+
+.card-product {
+    background-color: #050a3094;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 280px;
+    text-align: center; /* Alinea todo el contenido al centro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+    width: 40%; /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
+    max-width: 100%; /* Evita que la imagen sea más grande que su contenedor */
+    height: 140px; /* Mantiene una altura fija */
+    object-fit: cover; /* Asegura que la imagen se ajuste y mantenga su proporción dentro del contenedor */
+    border-radius: 10px; /* Redondea los bordes */
+    margin-top: 10px; /* Separación superior */
+}
+
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+h2 {
+    font-size: 1.6rem;
+    color: #FFFFFF;
+    margin-bottom: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+p {
+    color: #ffffffb7; 
+}
+
+.copy-font {
+    font-family: "Anton SC", sans-serif;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+footer {
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+.header-nav {
+    display: flex; /* Asegura que la navegación se alinee horizontalmente */
+}
+
+.header-nav ul {
+    list-style-type: none; /* Sin viñetas */
+    margin: 0; /* Sin margen */
+    padding: 0; /* Sin padding */
+    display: flex; /* Flexbox para los enlaces */
+}
+
+.header-nav li {
+    margin-left: 2rem; /* Espacio entre los enlaces */
+}
+
+.header-nav a {
+    color: #fff; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 1.5rem; /* Tamaño de fuente más pequeño */
+
+}
+
+.header-nav a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+
+/* Pagina de prendas con Ropa */
+
+.in-stock {
+    color: green; /* o red para out-of-stock */
+    font-weight: bold;
+    background-color: white;
+    border-radius: 2rem;
+    padding: 0.2rem 1rem; /* Espacio interno ajustado */
+}
+
+.out-of-stock {
+    color: red;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 2rem;
+    padding: 0.2rem 1rem; /* Espacio interno ajustado */
+}
+
+
+
+/* Pagina de Contacto */
+
+/* Estilos para la tarjeta de contacto */
+.contact-card {
+    background-color: #000000dc;
+    border-radius: 10px;
+    padding: 2rem;
+    max-width: 600px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-card h2 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+}
+
+.contact-card p {
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.info-item h3 {
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    text-decoration: underline;
+}
+
+.info-item p {
+    color: #ffffff;
+}
+
+.info-item a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.info-item a:hover {
+    text-decoration: underline;
+}
+
+
+/* Reponsive para todo */
+
+
+/* Media Queries for Responsive Design test */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-nav ul {
+        flex-direction: column;
+    }
+
+    .header-nav li {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+
+    .contact-card {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .contact-card {
+        padding: 1rem;
+    }
+
+    .contact-info {
+        gap: 0.5rem;
+    }
+
+    footer {
+        padding: 0.5rem;
+    }
+}
