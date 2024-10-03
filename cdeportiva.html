@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Peluditos Boutique | Deportiva</title>
+</head>
+<body>
+    <!-- Encabezado de la página -->
+    <header>
+        <h1 style="padding: 1.5rem; left: 0;">
+            <a href="index.html" style="color: #fff; text-decoration: none;">Peluditos Boutique</a>
+        </h1>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="form.html">Formulario</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="grid-container">
+
+        <div class="card-product">
+            <h2>Camiseta - 002</h2>
+            
+            <label for="size-2" style="color: white; margin-right: 2.5rem;">Talla:</label>
+            <select id="size-2" class="size-select">
+                <option value="M" data-price-increment="0">M</option>
+                <option value="L" data-price-increment="1">L</option>
+                <option value="XL" data-price-increment="2">X</option>
+                <option value="XXL" data-price-increment="3">XL</option>
+            </select>
+            <p style="color: white;">Precio: <span class="price" data-base-price="8">8€</span></p>
+            <p class="stock-status out-of-stock">Agotado</p>
+            <img src="/img/creflectante.png" alt="Camisa Deportiva" class="card-image">
+        </div>
+
+        <div class="card-product">
+            <h2>Camiseta - 003</h2>
+
+            <label for="size-3" style="color: white; margin-right: 2.5rem;">Talla:</label>
+            <select id="size-3" class="size-select">
+                <option value="M" data-price-increment="0">M</option>
+                <option value="L" data-price-increment="1">L</option>
+                <option value="XL" data-price-increment="2">X</option>
+                <option value="XXL" data-price-increment="3">XL</option>
+            </select>
+            <p style="color: white;">Precio: <span class="price" data-base-price="8">8€</span></p>
+            <p class="stock-status out-of-stock">Agotado</p>
+            <img src="/img/creflectante.png" alt="Camisa Deportiva" class="card-image">
+        </div>
+
+        <div class="card-product">
+            <h2>Camiseta - 002</h2>
+
+            <label for="size-2" style="color: white; margin-right: 2.5rem;">Talla:</label>
+            <select id="size-2" class="size-select">
+                <option value="M" data-price-increment="0">M</option>
+                <option value="L" data-price-increment="1">L</option>
+                <option value="XL" data-price-increment="2">X</option>
+                <option value="XXL" data-price-increment="3">XL</option>
+            </select>
+            <p style="color: white;">Precio: <span class="price" data-base-price="8">8€</span></p>
+            <p class="stock-status in-stock">En Stock</p>
+            <img src="/img/creflectante.png" alt="Camisa Deportiva" class="card-image">
+        </div>
+
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
