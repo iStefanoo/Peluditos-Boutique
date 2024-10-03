@@ -37,21 +37,19 @@ document.addEventListener('click', (event) => {
 
 
 
-let currentSlide = 0;
+function changeImage(thumbnail) {
+    // Encuentra el contenedor principal (la tarjeta de producto)
+    const cardProduct = thumbnail.closest('.card-product');
 
-function changeSlide(direction) {
-    const sliderImages = document.querySelector('.slider-images');
-    const totalImages = document.querySelectorAll('.slider-image').length;
+    // Encuentra la imagen principal dentro de esa tarjeta
+    const mainImage = cardProduct.querySelector('.main-image');
 
-    currentSlide += direction;
+    // Cambia la fuente de la imagen principal a la de la miniatura seleccionada
+    mainImage.src = thumbnail.src;
 
-    if (currentSlide >= totalImages) {
-        currentSlide = 0;
-    } else if (currentSlide < 0) {
-        currentSlide = totalImages - 1;
-    }
-
-    const offset = -currentSlide * 100;
-    sliderImages.style.transform = `translateX(${offset}%)`;
+    // Asegúrate de que la imagen principal se ajuste correctamente
+    mainImage.style.objectFit = 'contain'; // Se asegura que la imagen encaje dentro del contenedor sin deformarse
+    mainImage.style.width = '100%'; // Se ajusta el ancho al contenedor
+    mainImage.style.maxHeight = '300px'; // Se limita la altura máxima
+    mainImage.style.overflow = 'hidden'; // Evita que el contenido exceda el contenedor
 }
-

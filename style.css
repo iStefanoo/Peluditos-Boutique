@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
 
+
+/* Estilos para la barra de desplazamiento en Firefox */
+html {
+    scrollbar-width: none; /* Establece una barra de desplazamiento más delgada */
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -73,8 +79,8 @@ h1 {
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: #4e4e4e;
+    color: #ffffff;
     cursor: pointer;
     margin-top: -22px;
     margin-left: 11.5rem;
@@ -100,13 +106,41 @@ h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.card-image {
+.card-image, .main-image {
     width: 44%; /* Aumenta el ancho un 10% */
     max-width: 100%; /* Mantiene la imagen dentro del contenedor */
     height: 154px; /* Aumenta la altura un 10% */
     object-fit: cover; /* Asegura que la imagen se ajuste y mantenga su proporción dentro del contenedor */
     margin-top: 10px; /* Separación superior */
 }
+
+
+
+
+.thumbnail-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.thumbnail {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s ease; /* Añade un pequeño efecto al hacer hover */
+}
+
+.thumbnail:hover {
+    transform: scale(1.1); /* Aumenta el tamaño ligeramente al hacer hover */
+}
+
+/* Asegura que el contenedor no cambie de tamaño cuando se cambien las imágenes */
+.thumbnail-container img {
+    max-width: 100%;
+    height: auto;
+}
+
 
 
 
@@ -171,9 +205,6 @@ footer {
     font-weight: bold;
     background-color: white;
     border-radius: 0.5rem; /* Redondeado más pequeño */
-    padding: 0.1rem 0.5rem; /* Menor espacio interno para ajustar al texto */
-    display: inline-block; /* Asegura que el ancho sea solo lo necesario para el texto */
-    margin-top: -50px;
 }
 
 
@@ -183,8 +214,6 @@ footer {
     background-color: white;
     border-radius: 0.5rem; /* Redondeado más pequeño */
     padding: 0.1rem 0.5rem; /* Menor espacio interno para ajustar al texto */
-    display: inline-block; /* Asegura que el ancho sea solo lo necesario para el texto */
-    margin-top: -50px;
 }
 
 
@@ -271,7 +300,7 @@ footer {
     position: absolute;
     top: 60px; /* Ajusta este valor a la altura de tu encabezado */
     right: 20px;
-    background-color: #4F4F4F;
+    background-color: #050a3094;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-family: 'Courier New', Courier, monospace; /* Aplica la fuente aquí */
@@ -319,113 +348,60 @@ footer {
 }
 
 
-
-/* Slider de Imagenes */
-.slider {
-    position: relative;
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.slider-images {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.slider-image {
-    min-width: 100%;
-    height: auto;
-}
-
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0);
-    border: none;
-    color: white;
-    font-size: 1.5rem;
-    border-radius: 50%;
-    z-index: 2;
-}
-
-.prev {
-    left: -10px;
-}
-
-.next {
-    right: -5px;
-}
-
-.prev:hover, .next:hover {
-    color: yellow;
-}
-
-
-/* Reponsive para todo */
-
-
-/* Media Queries for Responsive Design test */
+/* Media Queries */
 @media (max-width: 768px) {
     .grid-container {
-        grid-template-columns: repeat(2, 1fr);
+        padding: 1rem; /* Reduce el padding en pantallas más pequeñas */
+        width: 100%; /* Asegura que ocupe el 100% del ancho disponible */
     }
 
-    .card {
-        width: 100%;
-        height: auto;
-    }
-
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .header-nav ul {
-        flex-direction: column;
+    h1 {
+        font-size: 1.5rem; /* Reduce el tamaño de la fuente en pantallas pequeñas */
     }
 
     .header-nav li {
-        margin-left: 0;
-        margin-top: 1rem;
+        margin-left: 0; /* Elimina el margen para evitar desplazamientos */
+        padding: 0.5rem; /* Agrega padding si es necesario para un mejor diseño */
     }
 
     .contact-card {
-        max-width: 90%;
+        padding: 1rem; /* Reduce el padding en pantallas pequeñas */
+        width: 100%; /* Asegura que ocupe el 100% del ancho disponible */
     }
 }
 
 @media (max-width: 480px) {
-    .grid-container {
-        grid-template-columns: 1fr;
+    .hamburger-menu {
+        top: 10px; /* Ajusta la posición del menú hamburguesa */
+        right: 10px; /* Ajusta la posición del menú hamburguesa */
+    }
+
+    .nav-menu {
+        top: 50px; /* Ajusta la posición del menú desplegable */
+        width: 100%; /* Asegura que ocupe el 100% del ancho disponible */
+    }
+
+    .nav-menu.active {
+        max-height: 300px; /* Establece un valor más bajo para permitir la expansión */
+    }
+
+    .nav-menu ul {
+        padding: 10px; /* Reduce el padding interno */
+        width: 100%; /* Asegura que ocupe el 100% del ancho disponible */
     }
 
     h1 {
-        font-size: 1.5rem;
+        font-size: 1.2rem; /* Reduce aún más el tamaño de la fuente */
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Muestra una columna en pantallas muy pequeñas */
+        width: 100%; /* Asegura que ocupe el 100% del ancho disponible */
+        overflow-x: hidden; /* Evita el desplazamiento horizontal */
     }
 
     .card {
-        width: 100%;
-        padding: 1rem;
-    }
-
-    .contact-card {
-        padding: 1rem;
-    }
-
-    .contact-info {
-        gap: 0.5rem;
-    }
-
-    footer {
-        padding: 0.5rem;
+        padding: 1rem; /* Reduce el padding en las tarjetas */
+        width: 100%; /* Asegura que ocupe el 100% del ancho disponible */
     }
 }
-
-
-

@@ -25,108 +25,67 @@
         </nav>
     </header>
 
+    <!-- Sección de producto con imágenes -->
     <section class="grid-container">
 
-        <div class="card-product">
-            <h2>Camiseta - 001</h2>
-            
-            <label for="size-2" style="color: white; margin-right: 3.5rem;">Talla:</label>
-            <select id="size-2" class="size-select">
-                <option value="M" data-price-increment="0">M</option>
-                <option value="L" data-price-increment="1">L</option>
-                <option value="XL" data-price-increment="2">X</option>
-                <option value="XXL" data-price-increment="3">XL</option>
-            </select>
-            <p style="color: white;">Precio: <span class="price" data-base-price="8.99">8,99€</span></p>
-            <p class="stock-status out-of-stock">Agotado</p>
-            
-            <!-- Slider de imágenes -->
-            <div class="slider">
-                <div class="slider-images">
-                    <img src="img/creflectante.png" alt="Camisa Deportiva 1" class="slider-image">
-                    <img src="img/ccasual.png" alt="Camisa Deportiva 2" class="slider-image">
-                    <img src="img/cimpermeable.png" alt="Camisa Deportiva 3" class="slider-image">
-                </div>
-                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-                <button class="next" onclick="changeSlide(1)">&#10095;</button>
-            </div>
-        </div>
-
+        
         <div class="card-product">
             <h2>Camiseta - 002</h2>
-            
+
             <label for="size-2" style="color: white; margin-right: 3.5rem;">Talla:</label>
-            <select id="size-2" class="size-select">
+            <select class="size-select">
                 <option value="M" data-price-increment="0">M</option>
                 <option value="L" data-price-increment="1">L</option>
-                <option value="XL" data-price-increment="2">X</option>
-                <option value="XXL" data-price-increment="3">XL</option>
+                <option value="XL" data-price-increment="2">XL</option>
+                <option value="XXL" data-price-increment="3">XXL</option>
             </select>
+
             <p style="color: white;">Precio: <span class="price" data-base-price="8.99">8,99€</span></p>
-            <p class="stock-status in-stock">En Stock</p>
-            
-            <!-- Slider de imágenes -->
-            <div class="slider">
-                <div class="slider-images">
-                    <img src="img/creflectante.png" alt="Camisa Deportiva 1" class="slider-image">
-                    <img src="img/ccasual.png" alt="Camisa Deportiva 2" class="slider-image">
-                    <img src="img/cimpermeable.png" alt="Camisa Deportiva 3" class="slider-image">
-                </div>
-                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+
+            <!-- Imagen principal del producto -->
+            <img class="main-image" style="height: 254px;" src="img/cdeportiva.png" alt="Camisa Deportiva" class="card-image">
+
+            <!-- Vista previa de imágenes pequeñas -->
+            <div class="thumbnail-container">
+                <img src="img/cdeportiva.png" alt="Camisa Deportiva 1" class="thumbnail" onclick="changeImage(this)">
+                <img src="img/cimpermeable.png" alt="Camisa Deportiva 2" class="thumbnail" onclick="changeImage(this)">
+                <img src="img/ccasual.png" alt="Camisa Deportiva 3" class="thumbnail" onclick="changeImage(this)">
+                <img src="img/creflectante.png" alt="Camisa Deportiva 4" class="thumbnail" onclick="changeImage(this)">
             </div>
+
+            <!-- Clase de stock debajo del precio -->
+            <p class="stock-status in-stock">En Stock</p>
         </div>
+
+
 
         <div class="card-product">
             <h2>Camiseta - 003</h2>
-            
+
             <label for="size-2" style="color: white; margin-right: 3.5rem;">Talla:</label>
-            <select id="size-2" class="size-select">
+            <select class="size-select">
                 <option value="M" data-price-increment="0">M</option>
                 <option value="L" data-price-increment="1">L</option>
-                <option value="XL" data-price-increment="2">X</option>
-                <option value="XXL" data-price-increment="3">XL</option>
+                <option value="XL" data-price-increment="2">XL</option>
+                <option value="XXL" data-price-increment="3">XXL</option>
             </select>
+
             <p style="color: white;">Precio: <span class="price" data-base-price="8.99">8,99€</span></p>
+
+            <!-- Imagen principal del producto -->
+            <img class="main-image" style="height: 254px;" src="img/cdeportiva.png" alt="Camisa Deportiva" class="card-image">
+
+            <!-- Vista previa de imágenes pequeñas -->
+            <div class="thumbnail-container">
+                <img src="img/cdeportiva.png" alt="Camisa Deportiva 1" class="thumbnail" onclick="changeImage(this)">
+                <img src="img/cimpermeable.png" alt="Camisa Deportiva 2" class="thumbnail" onclick="changeImage(this)">
+                <img src="img/ccasual.png" alt="Camisa Deportiva 3" class="thumbnail" onclick="changeImage(this)">
+                <img src="img/creflectante.png" alt="Camisa Deportiva 4" class="thumbnail" onclick="changeImage(this)">
+            </div>
+
+            <!-- Clase de stock debajo del precio -->
             <p class="stock-status out-of-stock">Agotado</p>
-            
-            <!-- Slider de imágenes -->
-            <div class="slider">
-                <div class="slider-images">
-                    <img src="img/creflectante.png" alt="Camisa Deportiva 1" class="slider-image">
-                    <img src="img/ccasual.png" alt="Camisa Deportiva 2" class="slider-image">
-                    <img src="img/cimpermeable.png" alt="Camisa Deportiva 3" class="slider-image">
-                </div>
-                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-                <button class="next" onclick="changeSlide(1)">&#10095;</button>
-            </div>
         </div>
-
-        <div class="card-product">
-            <h2>Camiseta - 004</h2>
-            
-            <label for="size-2" style="color: white; margin-right: 3.5rem;">Talla:</label>
-            <select id="size-2" class="size-select">
-                <option value="M" data-price-increment="0">M</option>
-                <option value="L" data-price-increment="1">L</option>
-                <option value="XL" data-price-increment="2">X</option>
-                <option value="XXL" data-price-increment="3">XL</option>
-            </select>
-            <p style="color: white;">Precio: <span class="price" data-base-price="8.99">8,99€</span></p>
-            <p class="stock-status in-stock">En Stock</p>
-            
-            <!-- Slider de imágenes -->
-            <div class="slider">
-                <div class="slider-images">
-                    <img src="img/creflectante.png" alt="Camisa Deportiva 1" class="slider-image">
-                    <img src="img/ccasual.png" alt="Camisa Deportiva 2" class="slider-image">
-                    <img src="img/cimpermeable.png" alt="Camisa Deportiva 3" class="slider-image">
-                </div>
-                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-                <button class="next" onclick="changeSlide(1)">&#10095;</button>
-            </div>
-        </div>
-
     </section>
 
     <script src="script.js"></script>
