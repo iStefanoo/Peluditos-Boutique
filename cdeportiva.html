@@ -12,7 +12,12 @@
         <h1 style="padding: 1.5rem; left: 0;">
             <a href="index.html" style="color: #fff; text-decoration: none;">Peluditos Boutique</a>
         </h1>
-        <nav class="header-nav">
+        <div class="hamburger-menu" id="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav id="nav-menu" class="nav-menu">
             <ul>
                 <li><a href="contact.html">Contacto</a></li>
                 <li><a href="form.html">Formulario</a></li>
@@ -23,9 +28,9 @@
     <section class="grid-container">
 
         <div class="card-product">
-            <h2>Camiseta - 002</h2>
+            <h2>Camiseta - 001</h2>
             
-            <label for="size-2" style="color: white; margin-right: 2.5rem;">Talla:</label>
+            <label for="size-2" style="color: white; margin-right: 3.5rem;">Talla:</label>
             <select id="size-2" class="size-select">
                 <option value="M" data-price-increment="0">M</option>
                 <option value="L" data-price-increment="1">L</option>
@@ -34,28 +39,23 @@
             </select>
             <p style="color: white;">Precio: <span class="price" data-base-price="8.99">8,99€</span></p>
             <p class="stock-status out-of-stock">Agotado</p>
-            <img src="img/creflectante.png" alt="Camisa Deportiva" class="card-image">
-        </div>
-
-        <div class="card-product">
-            <h2>Camiseta - 003</h2>
-
-            <label for="size-3" style="color: white; margin-right: 2.5rem;">Talla:</label>
-            <select id="size-3" class="size-select">
-                <option value="M" data-price-increment="0">M</option>
-                <option value="L" data-price-increment="1">L</option>
-                <option value="XL" data-price-increment="2">X</option>
-                <option value="XXL" data-price-increment="3">XL</option>
-            </select>
-            <p style="color: white;">Precio: <span class="price" data-base-price="8.99">8,99€</span></p>
-            <p class="stock-status out-of-stock">Agotado</p>
-            <img src="img/creflectante.png" alt="Camisa Deportiva" class="card-image">
+            
+            <!-- Slider de imágenes -->
+            <div class="slider">
+                <div class="slider-images">
+                    <img src="img/creflectante.png" alt="Camisa Deportiva 1" class="slider-image">
+                    <img src="img/ccasual.png" alt="Camisa Deportiva 2" class="slider-image">
+                    <img src="img/cimpermeable.png" alt="Camisa Deportiva 3" class="slider-image">
+                </div>
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
         </div>
 
         <div class="card-product">
             <h2>Camiseta - 002</h2>
-
-            <label for="size-2" style="color: white; margin-right: 2.5rem;">Talla:</label>
+            
+            <label for="size-2" style="color: white; margin-right: 3.5rem;">Talla:</label>
             <select id="size-2" class="size-select">
                 <option value="M" data-price-increment="0">M</option>
                 <option value="L" data-price-increment="1">L</option>
@@ -64,14 +64,70 @@
             </select>
             <p style="color: white;">Precio: <span class="price" data-base-price="8.99">8,99€</span></p>
             <p class="stock-status in-stock">En Stock</p>
-            <img src="img/creflectante.png" alt="Camisa Deportiva" class="card-image">
+            
+            <!-- Slider de imágenes -->
+            <div class="slider">
+                <div class="slider-images">
+                    <img src="img/creflectante.png" alt="Camisa Deportiva 1" class="slider-image">
+                    <img src="img/ccasual.png" alt="Camisa Deportiva 2" class="slider-image">
+                    <img src="img/cimpermeable.png" alt="Camisa Deportiva 3" class="slider-image">
+                </div>
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+        </div>
+
+        <div class="card-product">
+            <h2>Camiseta - 003</h2>
+            
+            <label for="size-2" style="color: white; margin-right: 3.5rem;">Talla:</label>
+            <select id="size-2" class="size-select">
+                <option value="M" data-price-increment="0">M</option>
+                <option value="L" data-price-increment="1">L</option>
+                <option value="XL" data-price-increment="2">X</option>
+                <option value="XXL" data-price-increment="3">XL</option>
+            </select>
+            <p style="color: white;">Precio: <span class="price" data-base-price="8.99">8,99€</span></p>
+            <p class="stock-status out-of-stock">Agotado</p>
+            
+            <!-- Slider de imágenes -->
+            <div class="slider">
+                <div class="slider-images">
+                    <img src="img/creflectante.png" alt="Camisa Deportiva 1" class="slider-image">
+                    <img src="img/ccasual.png" alt="Camisa Deportiva 2" class="slider-image">
+                    <img src="img/cimpermeable.png" alt="Camisa Deportiva 3" class="slider-image">
+                </div>
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+        </div>
+
+        <div class="card-product">
+            <h2>Camiseta - 004</h2>
+            
+            <label for="size-2" style="color: white; margin-right: 3.5rem;">Talla:</label>
+            <select id="size-2" class="size-select">
+                <option value="M" data-price-increment="0">M</option>
+                <option value="L" data-price-increment="1">L</option>
+                <option value="XL" data-price-increment="2">X</option>
+                <option value="XXL" data-price-increment="3">XL</option>
+            </select>
+            <p style="color: white;">Precio: <span class="price" data-base-price="8.99">8,99€</span></p>
+            <p class="stock-status in-stock">En Stock</p>
+            
+            <!-- Slider de imágenes -->
+            <div class="slider">
+                <div class="slider-images">
+                    <img src="img/creflectante.png" alt="Camisa Deportiva 1" class="slider-image">
+                    <img src="img/ccasual.png" alt="Camisa Deportiva 2" class="slider-image">
+                    <img src="img/cimpermeable.png" alt="Camisa Deportiva 3" class="slider-image">
+                </div>
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
         </div>
 
     </section>
-
-    <footer>
-        <p class="copy-font">&copy; 2024 Tienda de Ropa para Perros @StefanoAraque</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>

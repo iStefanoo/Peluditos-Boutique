@@ -61,7 +61,7 @@ h1 {
     background-color: #050a3094;
     padding: 1.5rem;
     border-radius: 10px;
-    width: 280px;
+    width: 380px;
     text-align: center; /* Alinea todo el contenido al centro */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -77,7 +77,7 @@ h1 {
     color: #333;
     cursor: pointer;
     margin-top: -22px;
-    margin-left: 9rem;
+    margin-left: 11.5rem;
     display: block;
     width: 80px;
 }
@@ -95,19 +95,19 @@ h1 {
     background-color: #050a3094;
     padding: 1.5rem;
     border-radius: 10px;
-    width: 280px;
+    width:360px;
     text-align: center; /* Alinea todo el contenido al centro */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card-image {
-    width: 40%; /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
-    max-width: 100%; /* Evita que la imagen sea más grande que su contenedor */
-    height: 140px; /* Mantiene una altura fija */
+    width: 44%; /* Aumenta el ancho un 10% */
+    max-width: 100%; /* Mantiene la imagen dentro del contenedor */
+    height: 154px; /* Aumenta la altura un 10% */
     object-fit: cover; /* Asegura que la imagen se ajuste y mantenga su proporción dentro del contenedor */
-    border-radius: 10px; /* Redondea los bordes */
     margin-top: 10px; /* Separación superior */
 }
+
 
 
 .card:hover {
@@ -170,16 +170,21 @@ footer {
     color: green; /* o red para out-of-stock */
     font-weight: bold;
     background-color: white;
-    border-radius: 2rem;
-    padding: 0.2rem 1rem; /* Espacio interno ajustado */
+    border-radius: 0.5rem; /* Redondeado más pequeño */
+    padding: 0.1rem 0.5rem; /* Menor espacio interno para ajustar al texto */
+    display: inline-block; /* Asegura que el ancho sea solo lo necesario para el texto */
+    margin-top: -50px;
 }
+
 
 .out-of-stock {
     color: red;
     font-weight: bold;
     background-color: white;
-    border-radius: 2rem;
-    padding: 0.2rem 1rem; /* Espacio interno ajustado */
+    border-radius: 0.5rem; /* Redondeado más pequeño */
+    padding: 0.1rem 0.5rem; /* Menor espacio interno para ajustar al texto */
+    display: inline-block; /* Asegura que el ancho sea solo lo necesario para el texto */
+    margin-top: -50px;
 }
 
 
@@ -231,6 +236,134 @@ footer {
 
 .info-item a:hover {
     text-decoration: underline;
+}
+
+
+
+
+/* Menu desplegable */
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px; /* Aumenta el ancho del menú hamburguesa */
+    height: 25px; /* Aumenta la altura del menú hamburguesa */
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+}
+
+.bar {
+    width: 100%;
+    height: 5px; /* Aumenta la altura de las barras */
+    background-color: #fff;
+    border-radius: 2px;
+    transition: 0.3s ease;
+    margin-top: 2px; /* Aumenta el margen superior para dar más espacio */
+}
+
+/* Hidden Menu */
+.nav-menu {
+    display: none; /* Cambiar a block solo con JavaScript */
+    position: absolute;
+    top: 60px; /* Ajusta este valor a la altura de tu encabezado */
+    right: 20px;
+    background-color: #4F4F4F;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Courier New', Courier, monospace; /* Aplica la fuente aquí */
+    font-weight: bold;
+    width: 200px; /* Aumenta el ancho del menú desplegable */
+    max-height: 0; /* Oculta el menú inicialmente */
+    overflow: hidden; /* Oculta el contenido desbordado */
+    transition: max-height 0.5s ease, opacity 0.5s ease; /* Transición para max-height */
+    opacity: 0; /* Oculta el menú inicialmente */
+}
+
+.nav-menu.active {
+    display: block; /* Cambia a block al activar */
+    max-height: 500px; /* Establece un valor alto para permitir la expansión */
+    opacity: 1; /* Muestra el menú */
+}
+
+/* Nav menu items */
+.nav-menu ul {
+    list-style-type: none;
+    padding: 15px; /* Aumenta el padding para dar más espacio interno */
+    margin: 0;
+}
+
+.nav-menu ul li {
+    margin: 15px 0; /* Aumenta el margen para dar más espacio entre los elementos */
+}
+
+.nav-menu ul li a {
+    text-decoration: none; /* Sin decoración de texto por defecto */
+    color: #fff;
+    font-size: 25px; /* Aumenta el tamaño de la fuente */
+    font-family: 'Courier New', Courier, monospace; /* Aplica la fuente a los enlaces también */
+    font-weight: bold;
+}
+
+/* Es el Hover de los Links de Contacto */
+.nav-menu ul li a:hover {
+    text-decoration: underline; /* Añade la decoración al hacer hover */
+}
+
+/* Menu Activo */
+.nav-menu.active {
+    display: block; /* Se mantiene aquí para visualización */
+}
+
+
+
+/* Slider de Imagenes */
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slider-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider-image {
+    min-width: 100%;
+    height: auto;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.prev {
+    left: -10px;
+}
+
+.next {
+    right: -5px;
+}
+
+.prev:hover, .next:hover {
+    color: yellow;
 }
 
 
@@ -293,3 +426,6 @@ footer {
         padding: 0.5rem;
     }
 }
+
+
+
